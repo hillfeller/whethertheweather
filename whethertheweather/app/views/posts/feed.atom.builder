@@ -13,7 +13,7 @@ atom_feed :language => 'en-US' do |feed|
       # the strftime is needed to work with Google Reader.
       entry.updated(post.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
 
-      entry.author do |author|
+      entry.author do |email|
         author.name entry.author_name
       end
     end

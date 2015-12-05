@@ -33,6 +33,10 @@ gem 'figaro'
 
 gem 'embedly'
 
+gem 'pundit'
+
+gem 'forecast_io'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

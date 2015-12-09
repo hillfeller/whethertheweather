@@ -24,7 +24,6 @@ users = User.all
 # #2
     title:  RandomData.random_sentence,
     body:   RandomData.random_paragraph,
-    user: RandomData.random_sentence
   )
 end
 posts = Post.all
@@ -36,7 +35,6 @@ posts = Post.all
 # #4
     post: posts.sample,
     body: RandomData.random_paragraph,
-    user: RandomData.random_sentence
   )
 end
 comments = Comment.all

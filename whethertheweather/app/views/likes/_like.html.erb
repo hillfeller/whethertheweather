@@ -1,12 +1,12 @@
 
-<!-- <div>
-  <%# if like = current_user.liked(comment) %>
-    <%=# link_to [comment.post, comment, like], class: 'btn btn-danger', method: :delete do %>
+<div>
+  <% if like = current_user.liked(comment) %>
+    <%= link_to [comment.post, comment, like], class: 'btn btn-danger', method: :delete do %>
       <i class="glyphicon glyphicon-star-empty"> </i>&nbsp; Unlike
-    <%# end %>
-  <%# else %>
-    <%#= link_to [comment.post, comment, Like.new], class: 'btn btn-primary', method: :post do %>
+    <% end %>
+  <% else %>
+    <%= link_to [comment.post, comment, Like.new], class: 'btn btn-primary', method: :post do %>
       <i class="glyphicon glyphicon-star"> </i>&nbsp; Like
-    <%# end %>
-  <%# end %>
-</div> -->
+    <% end %>
+  <% end %>
+</div>

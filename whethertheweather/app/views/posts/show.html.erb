@@ -9,7 +9,19 @@
 
 <p>
   <strong>User:</strong>
-  <%= @post.user %>
+  <%= @post.user.user_name %> posted <%= time_ago_in_words(@post.created_at) %> ago
+
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @post.user.location %>
+</p>
+
+
+<p>
+<strong>Body:</strong>
+<%= @post.body %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-success' %> |
@@ -17,8 +29,6 @@
 <%= link_to 'Back', posts_path %>
 
 <p>
-  <strong>Body:</strong>
-  <%= @post.body %>
     <div>
     <h3>Comments</h3>
     <%= render @post.comments %>

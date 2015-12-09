@@ -6,10 +6,20 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body >
+  <div class ="fixed">
+  <%= render 'locations/form', location: get_location_for_user(current_user) %>
+  </div>
+  <div class="absolute">
+  <a class="embedly-card" href="http://www.accuweather.com/">AccuWeather</a>
+  <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+  </div>
+  <br>
+  <div class="relative">
   <a class="embedly-card" href="http://www.arthritis.org/">Arthritis Foundation</a>
-<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
-<div class="container">
+  <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+  </div>
 
 <div class="container">
 
@@ -23,6 +33,10 @@
    <% end %>
 
 <%= yield %>
+
+
 </div>
+
+
 </body>
 </html>

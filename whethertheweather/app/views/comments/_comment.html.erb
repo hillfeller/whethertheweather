@@ -1,16 +1,16 @@
 <div class="media">
   <div class="media-body">
     <small>
-      <%= comment.user.name %> commented <%= time_ago_in_words(comment.created_at) %> ago
-      <% if user_is_authorized_for_comment?(comment) %>
-        | <%= link_to "Delete", [@post, comment], method: :delete %>
-      <% end %>
+      <%= @comment.user_name %> commented <%= time_ago_in_words(comment.created_at) %> ago
+
+        <%= link_to "Delete", [@post, comment], method: :delete %>
+
     </small>
     <p><%= comment.body %></p>
 
     <h3>
       <% if current_user %>
-        <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
+        <%#= render partial: 'likes/like', locals: { comment: comment } %>
       <% end %>
     </h3>
   </div>

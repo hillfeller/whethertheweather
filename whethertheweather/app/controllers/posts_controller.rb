@@ -2,6 +2,12 @@ class PostsController < ApplicationController
 
   before_action :require_sign_in, except: :show
 
+  def index
+    @posts = Post.all
+  end
+
+
+
   def show
     @post = Post.find(params[:id])
   end
@@ -12,7 +18,7 @@ class PostsController < ApplicationController
 
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params)
 
     if @post.save
       flash[:notice] = "Post was saved."

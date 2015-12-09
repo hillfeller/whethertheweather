@@ -18,5 +18,44 @@
   @import "bootstrap";
 
   body {
-    background-image: url("https://regmedia.co.uk/2013/06/08/rain_cloud.jpg?x=1200&y=794")
+    background-image: url("http://img03.deviantart.net/df26/i/2013/321/5/2/puffy_white_cloud_by_muffet1-d6unjqx.jpg");
+    font-color: white;
+  }
+
+  div.fixed{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+
+  div.absolute {
+    position: absolute;
+    top: 275px;
+    left: 0;
+    width: 50px;
+    height:300px;
+
+  }
+
+  div.relative{
+    position: relative;
+    top: 50px;
+    left: 1500px;
+    width: 50px;
+    height:300px;
+  }
+
+  div.container {
+    position: fixed;
+    left: 275px;
+    top: 50px;
+  }
+
+  .feed-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .full-width {
+    width: 50%;
   }

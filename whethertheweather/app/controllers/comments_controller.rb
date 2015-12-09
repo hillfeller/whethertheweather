@@ -1,15 +1,34 @@
 
 class CommentsController < ApplicationController
-  before_action :require_sign_in
-  before_action :authorize_user, only: [:destroy]
+  before_action :set_post
 
-  def create
-# #11
+  def new
     @post = Post.find(params[:post_id])
-    comment = @post.comments.new(comment_params)
-    comment.user = current_user
+    @comment = Comment.new
+  end
+
+  def edit
+    @comment = Comment.find(params[:id])
+  end
+
+  def update
+    @comment = Comment.find(params[:id])
 
     if comment.save
+      flash[:notice] = "Comment updated successfully."
+      redirect_to [@post]
+    else
+      flash[:error] = "Comment failed to save update."
+      redirect_to [@post]
+    end
+  end
+
+  def create
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.new(comment_params)
+    @comment.user = current_user
+
+    if @comment.save
       flash[:notice] = "Comment saved successfully."
       redirect_to [@post]
     else
@@ -20,9 +39,9 @@ class CommentsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:post_id])
-    comment = @post.comments.find(params[:id])
+    @comment = @post.comments.find(params[:id])
 
-    if comment.destroy
+    if @comment.destroy
       flash[:notice] = "Comment was deleted."
       redirect_to [@post]
     else
@@ -31,6 +50,9 @@ class CommentsController < ApplicationController
     end
   end
 
+
+
+
   private
 
 # #14
@@ -38,12 +60,8 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:body)
   end
 
-  def authorize_user
-    comment = Comment.find(params[:id])
-    unless current_user == comment.user
-      flash[:error] = "You do not have permission to delete this comment."
-      redirect_to [comment.post, comment.post]
-    end
+  def set_post
+    @post = Post.find(params[:post_id])
   end
 
 end

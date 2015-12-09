@@ -37,6 +37,10 @@ gem 'pundit'
 
 gem 'forecast_io'
 
+gem 'geocoder'
+
+gem 'feed-normalizer'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -57,4 +61,8 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem "nifty-generators"
 end
+
+gem 'mocha', group: :test

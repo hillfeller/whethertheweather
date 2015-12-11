@@ -1,15 +1,24 @@
 Rails.application.routes.draw do
-  resources :posts, only: [] do
-    resources :comments, only: [:create, :destroy] do
-      resources :likes, only: [:create, :destroy]
-    end
+
+  get 'welcome/index'
+
+  resources :posts, except: [:create, :destroy] do
+    resources :likes, only: [:create, :destroy]
+    resources :comments, only: [:create, :destroy, :update, :new, :edit]
   end
 
-  resources :posts
-  resources :locations
-  devise_for :users
-  resources :users, only: [:show]
+  resources :comments, only: [] do
+    resources :likes, only: [:create, :destroy]
+  end
 
-  root 'users#show'
+  resources :posts, only: [:create, :destroy]
+  devise_for :users
+  resources :users, only: [:show] do
+    resources :ailments
+  end
+
+  resources :locations
+
+  root 'welcome#index'
 
 end

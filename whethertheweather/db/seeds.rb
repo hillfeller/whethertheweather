@@ -11,7 +11,6 @@ include RandomData
     user_name:     RandomData.random_user_name,
     email:    RandomData.random_email,
     password: RandomData.random_sentence,
-    location: RandomData.random_word
   )
 
 end
@@ -24,6 +23,7 @@ users = User.all
 # #2
     title:  RandomData.random_sentence,
     body:   RandomData.random_paragraph,
+    user: users.sample
   )
 end
 posts = Post.all
@@ -35,6 +35,7 @@ posts = Post.all
 # #4
     post: posts.sample,
     body: RandomData.random_paragraph,
+    user: users.sample
   )
 end
 comments = Comment.all

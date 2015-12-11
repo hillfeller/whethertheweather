@@ -1,16 +1,16 @@
 <div class="media">
   <div class="media-body">
     <small>
-      <%= @comment.user_name %> commented <%= time_ago_in_words(comment.created_at) %> ago
-
-        <%= link_to "Delete", [@post, comment], method: :delete %>
+      <%#= comment.user %> commented <%= time_ago_in_words(comment.created_at) %> ago
+      <%#= link_to "Edit Comment", edit_post_comment_path(@comment.post, @comment), class: 'btn btn-success' %>
+      <%= link_to "Delete Comment", [comment.post, comment], method: :delete, class: 'btn btn-danger', data: {confirm: 'Confirm deletion?'} %>
 
     </small>
     <p><%= comment.body %></p>
 
     <h3>
       <% if current_user %>
-        <%#= render partial: 'likes/like', locals: { comment: comment } %>
+        <%= render partial: 'likes/likecomment', locals: { comment: comment } %>
       <% end %>
     </h3>
   </div>

@@ -1,6 +1,5 @@
-
 <div>
-  <% if like = current_user.liked(comment) %>
+  <% if like = current_user.liked_comment(comment) %>
     <%= link_to [comment.post, comment, like], class: 'btn btn-danger', method: :delete do %>
       <i class="glyphicon glyphicon-star-empty"> </i>&nbsp; Unlike
     <% end %>

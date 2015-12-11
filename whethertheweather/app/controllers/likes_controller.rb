@@ -4,9 +4,14 @@ class LikesController < ApplicationController
 
 
   def create
+    obj = nil
+    if params[:post_id].present?
+      obj = Post.find(params[:post_id])
+    else
+      obj = Comment.find(params[:comment_id])
+    end
 
-    comment = comment.find(params[:comment_id])
-    @like = current_user.likes.build(comment: comment)
+    @like = current_user.likes.build(likeable: obj)
 
     authorize @like
     if @like.save

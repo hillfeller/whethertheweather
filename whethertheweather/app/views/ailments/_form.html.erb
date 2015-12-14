@@ -1,11 +1,11 @@
 <h4>Add an ache, ailment, or condition</h4>
 <%= form_for(@ailment) do |f| %>
-  <% if ailment.errors.any? %>
+  <% if @ailment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(location.errors.count, "error") %> prohibited this ailment from being saved:</h2>
 
       <ul>
-      <% ailment.errors.full_messages.each do |message| %>
+      <% @ailment.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

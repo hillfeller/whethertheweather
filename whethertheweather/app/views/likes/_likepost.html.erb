@@ -1,10 +1,10 @@
 <div>
-<% if like = current_user.liked_post(post) %>
-  <%= link_to post, class: 'btn btn-danger', method: :delete do %>
+<% if like = current_user.liked?(post) %>
+  <%= link_to [post, like], class: 'btn btn-danger', method: :delete do %>
     <i class="glyphicon glyphicon-star"> </i>&nbsp; Unlike
     <% end %>
 <% else %>
-  <%= link_to post, class: 'btn btn-primary', method: :post do%>
+  <%= link_to [post, Like.new], class: 'btn btn-primary', method: :post do%>
     <i class="glyphicon glyphicon-star"></i>&nbsp; Like
   <% end %>
 <% end %>

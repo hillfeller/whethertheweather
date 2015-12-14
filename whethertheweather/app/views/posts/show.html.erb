@@ -5,7 +5,15 @@
   <%= @post.title %>
 </p>
 
+<p class="lead">
+  <%= render partial: "labels/list", locals: { labels: @post.labels } %>
+  <br />
+</p>
 
+<p>
+  <strong>Body:</strong>
+  <%= @post.body %>
+</p>
 
 <p>
   <strong>User:</strong>
@@ -34,10 +42,13 @@
 <p>
     <div>
     <h3>Comments</h3>
-    <%= render @post.comments %>
-  </div>
+    <div class='js-comments'>
+      <%= render @post.comments %>
+    </div>
    <% if current_user %>
-     <%= render 'comments/form', comment: Comment.new, post: @post %>
+     <div class='new-comment'>
+       <%= render 'comments/form', comment: Comment.new, post: @post %>
+     </div>
    <% end %>
   </div>
 </p>

@@ -2,7 +2,12 @@
       <% current_user.posts.each do |post|%>
           <h2> <% post.title %> </h2>
                <% render post.comments %>
-          <% end %>
+      <% end %>
+      <small>
+     <%= pluralize(@user.posts.count, 'post') %>,
+     <%= pluralize(@user.comments.count, 'comment') %>
+     <div class='js-comments-count'><%= pluralize(@user.comments.count, 'comment') %></div>
+   </small>
     </div>
   </div>
 

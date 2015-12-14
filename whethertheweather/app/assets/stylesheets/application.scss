@@ -37,9 +37,18 @@
 
   }
 
+  div.barometric{
+    position: fixed;
+    display: block;
+    top: 30px;
+    left: 900px;
+    width: 50px;
+    height: 300px;
+  }
+
   div.arthritis{
     position: fixed;
-    top: 50px;
+    top: 30px;
     left: 1100px;
     width: 50px;
     height:300px;
@@ -47,8 +56,8 @@
 
   div.container {
     position: absolute;
-    left: 200px;
-    top: 50px;
+    left: 250px;
+    top: 100px;
     width: 900px;
   }
 
@@ -58,10 +67,14 @@
   }
 
   .full-width {
-    width: 50%;
+    width: 100%;
   }
 
   .welcome{
     font-size: 20px;
     font-family: times;
+  }
+
+  .href {
+    color: blue;
   }

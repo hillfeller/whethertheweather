@@ -20,7 +20,7 @@ class LikesController < ApplicationController
       flash[:error] = "Like failed."
     end
 
-    redirect_to current_user
+    redirect_to 'post/index'
   end
 
 
@@ -35,6 +35,6 @@ class LikesController < ApplicationController
     else
       flash[:error] = "Unlike failed."
     end
-      redirect_to current_user
+      redirect_to 'post/index'
   end
 end

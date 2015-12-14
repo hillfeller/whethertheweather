@@ -9,11 +9,6 @@
   </div>
 
   <div class="field">
-    <%= f.label :ailment %><br />
-    <%= f.text_field :ailment %>
-  </div>
-
-  <div class="field">
     <%= f.label :location %><br />
     <%= f.text_field :location %>
   </div>
@@ -46,6 +41,9 @@
     <%= f.submit "Update" %>
   </div>
 <% end %>
+
+<h3>Ailments</h3>
+<%= link_to "Manage Ailments", ailments_path, class: "btn btn-info" %>
 
 <h3>Cancel my account</h3>
 

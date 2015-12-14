@@ -15,6 +15,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
 
     if comment.save
+      @comment.labels = Label.update_labels(params[:comment][:labels])
       flash[:notice] = "Comment updated successfully."
       redirect_to [@post]
     else
@@ -29,11 +30,18 @@ class CommentsController < ApplicationController
     @comment.post.user = current_user
 
     if @comment.save
+      @comment.labels = Label.update_labels(params[:comment][:labels])
+
       flash[:notice] = "Comment saved successfully."
       redirect_to [@post]
     else
       flash[:error] = "Comment failed to save."
       redirect_to [@post]
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
@@ -47,6 +55,11 @@ class CommentsController < ApplicationController
     else
       flash[:error] = "Comment couldn't be deleted. Try again."
       redirect_to [@post]
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 

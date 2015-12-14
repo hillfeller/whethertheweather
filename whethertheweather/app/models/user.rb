@@ -9,11 +9,8 @@ class User < ActiveRecord::Base
   has_many :locations
   has_many :ailments
 
-  def liked_post(post)
-      likes.where(post_id: post.id).first
+  def liked?(likeable)
+    likes.where(likeable: likeable).first
   end
 
-  def liked_comment(comment)
-      likes.where(comment_id: comment.id).first
-  end
 end

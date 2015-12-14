@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :labels, only: [:show]
+
   get 'welcome/index'
 
   resources :posts, except: [:create, :destroy] do
@@ -11,11 +13,10 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
   end
 
-  resources :posts, only: [:create, :destroy]
+  resources :posts, only: [:create, :destroy, :show]
   devise_for :users
-  resources :users, only: [:show] do
-    resources :ailments
-  end
+
+  resources :ailments
 
   resources :locations
 

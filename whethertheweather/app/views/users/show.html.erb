@@ -4,11 +4,24 @@
                <% render post.comments %>
       <% end %>
       <small>
-     <%= pluralize(@user.posts.count, 'post') %>,
-     <%= pluralize(@user.comments.count, 'comment') %>
-     <div class='js-comments-count'><%= pluralize(@user.comments.count, 'comment') %></div>
-   </small>
+       <%= pluralize(@user.posts.count, 'post') %>,
+       <div class='js-comments-count'><%= pluralize(@user.comments.count, 'comment') %></div>
+     </small>
     </div>
   </div>
+  <ul id="bar">
+   <li id="rain">
+      <div class="top">
+         <img src="http://3.bp.blogspot.com/-EvEvE_V4ZfU/TwHMuQSzjgI/AAAAAAAAH_w/qu1SBfX4XZM/s1600/rain+cloud.png" alt="rain" />
+      </div>
+      <div class="bottom">
+         <div class="infobox">
+            <h3>Rain</h3>
+            <p>80,1</p>
+         </div>
+      </div>
+   </li>
+   <!-- More bar chart items -->
+</ul>
 
 </div>

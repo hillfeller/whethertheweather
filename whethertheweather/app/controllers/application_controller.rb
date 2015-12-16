@@ -14,6 +14,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) << :location
   end
 
+  def after_sign_up_path_for(resource)
+    ailments_path
+  end
+
   private
 
   def require_sign_in

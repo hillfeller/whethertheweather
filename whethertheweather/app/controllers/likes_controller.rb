@@ -1,6 +1,6 @@
 class LikesController < ApplicationController
   before_action :authenticate_user!
-  after_action :verify_authorized
+  #after_action :verify_authorized
 
 
   def create
@@ -13,14 +13,14 @@ class LikesController < ApplicationController
 
     @like = current_user.likes.build(likeable: obj)
 
-    authorize @like
+    #authorize @like
     if @like.save
       flash[:notice] = "comment liked."
     else
       flash[:error] = "Like failed."
     end
 
-    redirect_to 'post/index'
+    redirect_to :back
   end
 
 
@@ -28,13 +28,13 @@ class LikesController < ApplicationController
 
     @like = current_user.likes.find(params[:id])
 
-    authorize @like
+    #authorize @like
 
     if @like.destroy
       flash[:notice] = "comment unliked."
     else
       flash[:error] = "Unlike failed."
     end
-      redirect_to 'post/index'
+      redirect_to :back
   end
 end

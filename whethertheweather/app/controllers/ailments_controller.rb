@@ -1,4 +1,6 @@
 class AilmentsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @ailment = Ailment.new
     @ailments = current_user.ailments

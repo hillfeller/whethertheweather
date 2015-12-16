@@ -41,24 +41,24 @@
     position: fixed;
     display: block;
     top: 30px;
-    left: 900px;
+    left: 1150px;
     width: 50px;
     height: 300px;
   }
 
   div.arthritis{
     position: fixed;
-    top: 30px;
-    left: 1100px;
+    top: 375px;
+    left: 1150px;
     width: 50px;
     height:300px;
   }
 
   div.container {
     position: absolute;
-    left: 250px;
-    top: 100px;
-    width: 900px;
+    left: 200px;
+    top: 70px;
+    width: 950px;
   }
 
   .feed-icon {
@@ -77,4 +77,8 @@
 
   .href {
     color: blue;
+  }
+
+  .datagrid{
+    background: transparentize(pink, 0.7);;
   }

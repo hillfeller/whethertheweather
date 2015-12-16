@@ -25,8 +25,12 @@ class LocationsController < ApplicationController
     @location = Location.new(location_params)
     @location.user = current_user
 
-    @location.save if current_user
-    render :show
+    if current_user
+      @location.save
+      redirect_to :back
+    else
+      render welcome_index_path
+    end
 
   end
 

@@ -26,14 +26,15 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    @comment = @post.comments.new(comment_params)
-    @comment.post.user = current_user
+    @comment = Comment.new(comment_params)
+    @comment.post = @post
+    @comment.user = current_user
 
     if @comment.save
       @comment.labels = Label.update_labels(params[:comment][:labels])
 
       flash[:notice] = "Comment saved successfully."
-      redirect_to [@post]
+      redirect_to posts_path
     else
       flash[:error] = "Comment failed to save."
       redirect_to [@post]
@@ -62,8 +63,6 @@ class CommentsController < ApplicationController
       format.js
     end
   end
-
-
 
 
   private

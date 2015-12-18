@@ -40,6 +40,13 @@ posts = Post.all
 end
 comments = Comment.all
 
+users = User.all
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
+
 puts "Seed finished"
 puts "#{User.count} users created"
 puts "#{Post.count} posts created"

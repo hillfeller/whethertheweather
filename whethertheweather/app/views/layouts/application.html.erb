@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Whethertheweather</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+</head>
+
+<ul>
+  <li><%= link_to 'Weather Notifications', posts_path %></li>
+  <li><%= link_to 'Welcome', welcome_index_path %></li>
+  <li><%= link_to 'Profile', current_user %></li>
+</ul>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Junction">
 </head>
 
 <body >

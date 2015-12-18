@@ -24,8 +24,7 @@ class PostsController < ApplicationController
       @post.labels = Label.update_labels(params[:post][:labels])
 
       flash[:notice] = "Post was saved."
-# #36
-      redirect_to @post
+      redirect_to posts_path
     else
       flash[:error] = "There was an error saving the post. Please try again."
       render :new

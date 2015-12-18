@@ -1,9 +1,10 @@
-<%= form_for(@labels) do |f| %>
+
+<%= form_for Label.new do |f| %>
   <div class="form-group">
     <%= f.label :labels %>
     <%= f.text_field :labels,
                      class: 'form-control',
-                     placeholder: "Enter labels (separated by commas), such as 'pouring', 'drizzling' 'sun is shining'",
+                     placeholder: "Enter labels (separated by commas), such as 'imminent downpour', 'drizzle' 'sun is shining'",
                      value: labels.map(&:name).join(', ') %>
   </div>
 <% end %>

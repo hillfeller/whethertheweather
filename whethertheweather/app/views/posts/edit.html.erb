@@ -1,9 +1,8 @@
-<h1>Edit Post</h1>
+<div class="datagrid">
+<h1>Edit Your Weather Update</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @post %> |
 <%= link_to 'Back', posts_path %>
-<div class="form-group">
-  <%= render partial: 'labels/form', locals: { f: f, labels: @post.labels } %>
 </div>

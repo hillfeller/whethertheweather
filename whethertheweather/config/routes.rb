@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :labels, only: [:show]
+  resources :labels, only: [:show, :create, :destroy]
 
   get 'welcome/index'
 
@@ -15,6 +15,14 @@ Rails.application.routes.draw do
 
   resources :posts, only: [:create, :destroy, :show]
   devise_for :users
+
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
+  resources :relationships, only: [:create, :destroy, :show]
 
   resources :ailments
 

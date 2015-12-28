@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151216184314) do
+ActiveRecord::Schema.define(version: 20151228191949) do
 
   create_table "ailments", force: :cascade do |t|
     t.text     "description"
@@ -45,6 +45,9 @@ ActiveRecord::Schema.define(version: 20151216184314) do
   add_index "labelings", ["labelable_type", "labelable_id"], name: "index_labelings_on_labelable_type_and_labelable_id"
 
   create_table "labels", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -76,6 +79,7 @@ ActiveRecord::Schema.define(version: 20151216184314) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "comment_id"
+    t.integer  "label_id"
   end
 
   add_index "posts", ["comment_id"], name: "index_posts_on_comment_id"

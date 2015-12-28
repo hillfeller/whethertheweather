@@ -2,11 +2,32 @@ class Post < ActiveRecord::Base
   belongs_to :user
   has_many :comments
   has_many :likes, as: :likeable
-  has_many :labelings, as: :labelable
-  has_many :labels, through: :labelings
+  belongs_to :label
 
   validates :title, length: {minimum: 5}, presence: true
-  validates :body, length: {maximum: 150}, presence: true
+  validates :body, length: {maximum: 500}, presence: true
+#  validates :label, presence: true
+
+  def shine?
+    label.name == "shine" if label
+  end
+
+  def cloudy?
+    label.name == "cloudy" if label
+  end
+
+
+  def drizzle?
+    label.name == "drizzle" if label
+  end
+
+  def downpour?
+    label.name == "imminent downpour" if label
+  end
+
+  def rain?
+    label.name == "rain" if label
+  end
 
 
 end

@@ -2,9 +2,6 @@
 <%= form_for Label.new do |f| %>
   <div class="form-group">
     <%= f.label :labels %>
-    <%= f.text_field :labels,
-                     class: 'form-control',
-                     placeholder: "Enter labels (separated by commas), such as 'imminent downpour', 'drizzle' 'sun is shining'",
-                     value: labels.map(&:name).join(', ') %>
+    <%= select_tag "labels", "<option>Shine</option><option>Cloudy</option><option>Drizzle</option><option>Rain</option><option>Imminent Downpour</option>".html_safe, multiple: false%>
   </div>
 <% end %>

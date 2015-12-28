@@ -1,4 +1,4 @@
-
+<div>
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -22,9 +22,14 @@
   </div>
 
   <div class="form-group">
-  <%= render partial: 'labels/form', locals: { f: f, labels: @post.labels } %>
+  <%#= render partial: 'labels/form', locals: { f: f, label: @post.label } %>
+
+    <%= label_tag :label %>
+    <%= select_tag "label", "<option>Shine</option><option>Cloudy</option><option>Drizzle</option><option>Rain</option><option>Imminent Downpour</option>".html_safe, multiple: false%>
+
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>

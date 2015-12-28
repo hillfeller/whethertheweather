@@ -1,7 +1,7 @@
-<div class="datagrid"
-<h4>Add a comment</h4>
+<div class="datagrid">
+<h3>Add a comment</h3>
 
-<%= form_for [post, comment], remote: true do |f| %>
+<%= form_for [@post, Comment.new], remote: true do |f| %>
   <div class="form-group">
     <%= f.label :body, class: 'sr-only' %>
     <%= f.text_field :body, class: 'form-control', placeholder: "Enter a new comment" %>

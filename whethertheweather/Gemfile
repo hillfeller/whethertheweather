@@ -72,3 +72,5 @@ group :development do
 end
 
 gem 'mocha', group: :test
+
+gem 'yahoo_weather'

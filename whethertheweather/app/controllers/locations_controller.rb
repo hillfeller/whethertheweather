@@ -12,7 +12,6 @@ class LocationsController < ApplicationController
   # GET /locations/1.json
   def show
     @location = Location.find(params[:id])
-
   end
 
   # GET /locations/new
@@ -24,10 +23,16 @@ class LocationsController < ApplicationController
   def create
     @location = Location.new(location_params)
     @location.user = current_user
+    client = YahooWeather::Client.new
+    response = client.fetch_by_location(@location.address)
+    @place = response.doc["title"].html_safe
+    @weather = response.doc["item"]["description"].html_safe
+    @atmosphere = response.doc["atmosphere"]
 
     if current_user
       @location.save
-      redirect_to :back
+
+      render :show
     else
       render welcome_index_path
     end

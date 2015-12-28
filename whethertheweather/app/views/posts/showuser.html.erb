@@ -1,14 +1,6 @@
 <div class="datagrid">
 <div class="usershow">
-  <% set_weather_for(@location) %>
-<p><%=@place%></p>
-<p><%=@weather%></p>
-<br><br/>
-<p>Humidity: <%= @atmosphere["humidity"]%></p>
-<p>Pressure: <%= @atmosphere["pressure"]%></p>
-<p>Rising: <%=@atmosphere["rising"]%></p>
-<p>Visibility: <%=@atmosphere["visibility"]%></p>
-<h1>Whether the Weather for <%= @user.user_name %>!</h1>
+<h1>Whether the Weather for <%= @post.user.user_name %>!</h1>
   <% if current_user.following?(@user) %>
     <%= link_to "Unfollow", current_user.relationship_for(@user), method: :delete, class: "btn btn-danger" %>
   <% else %>

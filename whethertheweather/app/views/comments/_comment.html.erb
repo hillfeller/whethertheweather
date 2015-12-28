@@ -3,12 +3,6 @@
   <div class="media-body">
     <p><%= comment.body %></p>
       <%= comment.user.user_name %> commented <%= time_ago_in_words(comment.created_at) %> ago
-      <div class="row">
-        <div class="col-md-8">
-          <%= render partial: "labels/list", locals: { labels: comment.post.labels } %>
-          <br />
-        </div>
-      </div>
       <%= link_to "Edit Comment", edit_post_comment_path(comment.post, comment), class: 'btn btn-success' %>
       | <%= link_to "Delete Comment", [comment.post, comment], method: :delete, remote: true %>
     <h3>

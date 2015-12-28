@@ -31,17 +31,13 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
-      @comment.labels = Label.update_labels(params[:comment][:labels])
-
       flash[:notice] = "Comment saved successfully."
-      redirect_to posts_path
     else
       flash[:error] = "Comment failed to save."
-      redirect_to [@post]
     end
 
     respond_to do |format|
-      format.html
+      format.html { redirect_to @post }
       format.js
     end
   end
@@ -58,10 +54,10 @@ class CommentsController < ApplicationController
       redirect_to [@post]
     end
 
-    respond_to do |format|
-      format.html
-      format.js
-    end
+    # respond_to do |format|
+    #   format.html
+    #   format.js
+    # end
   end
 
 

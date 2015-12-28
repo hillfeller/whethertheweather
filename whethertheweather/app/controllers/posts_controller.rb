@@ -6,14 +6,21 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-
-
   def show
     @post = Post.find(params[:id])
   end
 
+  def show_user
+    @post.user.user_name = User.find(params[:user_id])
+    if @post.user.user_name.save
+      render :showuser
+    end
+  end
+
+
   def new
     @post = Post.new
+
   end
 
 
@@ -24,7 +31,7 @@ class PostsController < ApplicationController
       @post.labels = Label.update_labels(params[:post][:labels])
 
       flash[:notice] = "Post was saved."
-      redirect_to posts_path
+      redirect_to @post
     else
       flash[:error] = "There was an error saving the post. Please try again."
       render :new
@@ -38,10 +45,10 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     @post.assign_attributes(post_params)
+    @label = Label.find_by(name: params[:label].downcase)
+    @post.label = @label if @label
 
     if @post.save
-      @post.labels = Label.update_labels(params[:post][:labels])
-
       flash[:notice] = "Post was updated."
       redirect_to @post
     else

@@ -1,5 +1,8 @@
+<% set_weather_for(@location.address) %>
 <p id="notice"><%= notice %></p>
-
+<%=@place%>
+<%=@weather%>
+<%=@atmosphere%>
 <p>
   <strong>Address:</strong>
   <%= @location.address %>
@@ -14,6 +17,10 @@
   <strong>Longitude:</strong>
   <%= @location.longitude %>
 </p>
+<p>
+
+</p>
+
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>

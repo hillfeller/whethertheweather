@@ -1,0 +1,102 @@
+
+ {
+    "title": "Yahoo! Weather - New York, NY",
+    "link": "http://us.rd.yahoo.com/dailynews/rss/weather/New_York__NY/*http://weather.yahoo.com/forecast/USNY0996_f.html",
+    "description": "Yahoo! Weather for New York, NY",
+    "language": "en-us",
+    "lastBuildDate": "Tue, 22 Dec 2015 2:50 pm EST",
+    "ttl": "60",
+    "location": {
+       "city": "New York",
+       "country": "United States",
+       "region": "NY"
+    },
+    "units": {
+       "distance": "mi",
+       "pressure": "in",
+       "speed": "mph",
+       "temperature": "F"
+    },
+    "wind": {
+       "chill": "60",
+       "direction": "0",
+       "speed": "7"
+    },
+    "atmosphere": {
+       "humidity": "86",
+       "pressure": "29.92",
+       "rising": "0",
+       "visibility": "10"
+    },
+    "astronomy": {
+       "sunrise": "7:16 am",
+       "sunset": "4:30 pm"
+    },
+    "image": {
+       "title": "Yahoo! Weather",
+       "width": "142",
+       "height": "18",
+       "link": "http://weather.yahoo.com",
+       "url": "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+    },
+    "item": {
+       "title": "Conditions for New York, NY at 2:50 pm EST",
+       "lat": "40.71",
+       "long": "-74.01",
+       "link": "http://us.rd.yahoo.com/dailynews/rss/weather/New_York__NY/*http://weather.yahoo.com/forecast/USNY0996_f.html",
+       "pubDate": "Tue, 22 Dec 2015 2:50 pm EST",
+       "condition": {
+          "code": "26",
+          "date": "Tue, 22 Dec 2015 2:50 pm EST",
+          "temp": "60",
+          "text": "Cloudy"
+       },
+       "description": "\n<img src=\"http://l.yimg.com/a/i/us/we/52/26.gif\"/><br />\n<b>Current Conditions:<\/b><br />\nCloudy, 60 F<BR />\n<BR /><b>Forecast:<\/b><BR />\nTue - Mostly Cloudy. High: 60 Low: 54<br />\nWed - Rain. High: 63 Low: 61<br />\nThu - Thundershowers. High: 73 Low: 61<br />\nFri - PM Rain. High: 65 Low: 52<br />\nSat - Light Rain. High: 54 Low: 52<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/New_York__NY/*http://weather.yahoo.com/forecast/USNY0996_f.html\">Full Forecast at Yahoo! Weather<\/a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel<\/a>)<br/>\n",
+       "forecast": [
+          {
+             "code": "27",
+             "date": "22 Dec 2015",
+             "day": "Tue",
+             "high": "60",
+             "low": "54",
+             "text": "Mostly Cloudy"
+          },
+          {
+             "code": "12",
+             "date": "23 Dec 2015",
+             "day": "Wed",
+             "high": "63",
+             "low": "61",
+             "text": "Rain"
+          },
+          {
+             "code": "11",
+             "date": "24 Dec 2015",
+             "day": "Thu",
+             "high": "73",
+             "low": "61",
+             "text": "Thundershowers"
+          },
+          {
+             "code": "12",
+             "date": "25 Dec 2015",
+             "day": "Fri",
+             "high": "65",
+             "low": "52",
+             "text": "PM Rain"
+          },
+          {
+             "code": "11",
+             "date": "26 Dec 2015",
+             "day": "Sat",
+             "high": "54",
+             "low": "52",
+             "text": "Light Rain"
+          }
+       ],
+       "guid": {
+          "isPermaLink": "false",
+          "content": "USNY0996_2015_12_26_7_00_EST"
+       }
+    }
+ }

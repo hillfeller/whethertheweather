@@ -36,7 +36,7 @@
   }
 
   div.locations{
-    position: fixed;
+    position: absolute;
     top: 70px;
     left: 10px;
   }
@@ -47,6 +47,7 @@
     left: 0;
     width: 50px;
     height:300px;
+    text-align: right;
 
   }
 
@@ -54,15 +55,16 @@
     position: absolute;
     display: block;
     top: 10px;
-    left: 1150px;
+    //left: 1150px;
     width: 50px;
     height: 300px;
+    text-align: right;
   }
 
   div.arthritis{
     position: absolute;
     top: 355px;
-    left: 1150px;
+    //left: 1150px;
     width: 50px;
     height:300px;
   }
@@ -94,7 +96,7 @@
   }
 
   .datagrid{
-    background: transparentize(white, 0.6);
+    background: transparentize(white, 0.5);
     width: 900px;
     border: 1px;
     left: 350px;
@@ -368,4 +370,10 @@ img {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
+}
+
+.standardfont{
+  font-size: 18px;
+  font-family: 'Times', serif;
+
 }

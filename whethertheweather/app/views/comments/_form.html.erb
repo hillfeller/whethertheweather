@@ -1,4 +1,4 @@
-<div class="datagrid">
+
 <h3>Add a comment</h3>
 
 <%= form_for [@post, Comment.new], remote: true do |f| %>
@@ -8,4 +8,3 @@
   </div>
   <%= f.submit "Submit Comment", class: 'btn btn-default pull-right' %>
 <% end %>
-</div>

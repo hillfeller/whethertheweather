@@ -6,9 +6,8 @@
   <%= @post.title %>
 </p>
 
-<p class="lead">
+<p>
   <%= @post.label.name if @post.label %>
-  <br />
 </p>
 
 <p>
@@ -34,10 +33,10 @@
 <% if current_user %>
   <%= render partial: 'likes/likepost', locals: { post: @post } %>
 <% end %>
-</div>
+
 <p>
     <div>
-    <h3>Comments</h3>
+    <h1>Comments</h1>
     <div class='js-comments'>
       <%= render @post.comments %>
     </div>
@@ -48,3 +47,4 @@
    <% end %>
   </div>
 </p>
+</div>

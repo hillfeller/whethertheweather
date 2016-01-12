@@ -1,5 +1,5 @@
 <div class="checkweather">
-<h4>Check the weather!</h4>
+<h4>Check the weather</h4>
 <%= form_for Location.new do |f| %>
   <% if location.errors.any? %>
     <div id="error_explanation">
@@ -14,8 +14,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, placeholder: "Your location" %>
   </div>
 
   <div class="actions">

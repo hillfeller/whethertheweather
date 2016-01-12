@@ -1,13 +1,10 @@
 <p id="notice"><%= notice %></p>
 <div class="datagrid">
 <h1>Weather Notifications</h1>
-<br>
-<%= link_to 'Post a new weather update!', new_post_path, class: 'btn btn-success'  %>
 
-<br>
-<br>
+<%= link_to 'Post a new weather update!', new_post_path, class: 'btn btn-success post-update-button'  %>
 
-<table class = "table table-bordered">
+<table class="table table-box">
   <thead>
     <tr>
       <th>Weather Updates?</th>
@@ -37,6 +34,7 @@
   </tbody>
 </table>
 </div>
+
 <br>
 
 <%= link_to image_tag('feed-icon-28x28.png', class: "feed-icon" ), posts_path(:atom)%>

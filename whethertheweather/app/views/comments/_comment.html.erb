@@ -1,6 +1,5 @@
-<div class="datagrid">
-<div class="media">
-  <div class="media-body">
+
+<div>
     <p><%= comment.body %></p>
       <%= comment.user.user_name %> commented <%= time_ago_in_words(comment.created_at) %> ago
       <%= link_to "Edit Comment", edit_post_comment_path(comment.post, comment), class: 'btn btn-success' %>
@@ -10,6 +9,4 @@
         <%= render partial: 'likes/likecomment', locals: { comment: comment } %>
       <% end %>
     </h3>
-  </div>
-</div>
 </div>

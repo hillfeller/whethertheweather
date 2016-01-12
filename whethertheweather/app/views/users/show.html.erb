@@ -1,29 +1,28 @@
 <div class="datagrid">
+  <h1>Whether the Weather for <%= @user.user_name %>!</h1>
+    <p><% if current_user.following?(@user) %>
+      <%= link_to "Unfollow", current_user.relationship_for(@user), method: :delete, class: "btn btn-danger" %>
+    <% else %>
+      <%= link_to "Follow", relationships_path(user_id: @user.id), method: :post, class: "btn btn-success" %>
+    <% end %></p>
+
+      <p>  <%= "#{@user.user_name}'s location is #{@user.location}"%> </p>
+
+
 <div class="usershow">
   <% set_weather_for(@location) %>
 <p><%=@place%></p>
 <p><%=@weather%></p>
-<br><br/>
-<p>Humidity: <%= @atmosphere["humidity"]%></p>
-<p>Pressure: <%= @atmosphere["pressure"]%></p>
-<p>Rising: <%=@atmosphere["rising"]%></p>
-<p>Visibility: <%=@atmosphere["visibility"]%></p>
-<h1>Whether the Weather for <%= @user.user_name %>!</h1>
-  <% if current_user.following?(@user) %>
-    <%= link_to "Unfollow", current_user.relationship_for(@user), method: :delete, class: "btn btn-danger" %>
-  <% else %>
-    <%= link_to "Follow", relationships_path(user_id: @user.id), method: :post, class: "btn btn-success" %>
-  <% end %></p>
-  <br>
 
-    <p>  <%= "#{@user.user_name}'s location is #{@user.location}"%> </p>
-    <p>  <%="#{@user.user_name}'s ailments include #{@user.ailments.map(&:description).to_sentence}"%> </p>
-      <section class="stats">
-        <%= render 'shared/stats' %>
-      </section>
+<p>Humidity: <%= @atmosphere["humidity"]%>, Pressure: <%= @atmosphere["pressure"]%></p>
 
-  </div>
-</div>
+<p>  <%="#{@user.user_name}'s ailments include #{@user.ailments.map(&:description).to_sentence}"%> </p>
+  <section class="stats">
+    <%= render 'shared/stats' %>
+  </section>
+
+<h1>User Statistics</h1>
+<br>
 <ul id="bar">
  <li id="shine">
     <div class="top">
@@ -93,3 +92,4 @@
 
 
 </ul>
+</div>

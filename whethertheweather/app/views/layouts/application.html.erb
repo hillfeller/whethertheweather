@@ -15,9 +15,13 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=adamina">
 </head>
 
-<body
+<body>
   <div class="row">
     <div class="col-md-2">
+      <ul class="navbar">
+        <li>&nbsp;&nbsp;<%='WTW' %>&nbsp;&nbsp;</li>
+      </ul>
+
       <div class ="locations">
         <%= render 'locations/form', location: get_location_for_user(current_user) %>
       </div>
@@ -26,9 +30,8 @@
         <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
       </div>
     </div>
-    <div class="col-md-7">
+    <div class="col-md-8">
       <ul class="navbar">
-        <li>&nbsp;&nbsp;<%='Weather the Weather' %>&nbsp;&nbsp;</li>
         <li>&nbsp;&nbsp;<%=link_to 'Home', welcome_index_path %>&nbsp;&nbsp;</li>
         <li>&nbsp;&nbsp;<%= link_to 'Weather Notifications', posts_path %>&nbsp;&nbsp;</li>
         <li>&nbsp;&nbsp;<%= link_to 'Profile', current_user %>&nbsp;&nbsp;</li>
@@ -46,7 +49,7 @@
       </div>
       <%= yield %>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-2">
       <div class="right-banner">
         <blockquote class="embedly-card" data-card-key="44415a88fc3641429b5b6c882673e8da" data-card-theme="dark"><h4><a href="http://www.weatherforyou.com/maps/barometric_pressure.php">Latest United States Barometric Pressure - WeatherForYou.com</a></h4><p>Latest reported barometric pressure across the United States.</p></blockquote>
         <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>

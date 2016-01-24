@@ -9,7 +9,7 @@
       <p>  <%= "#{@user.user_name}'s location is #{@user.location}"%> </p>
 
 
-<div class="usershow">
+<div class="col-md-7">
   <% set_weather_for(@location) %>
 <p><%=@place%></p>
 <p><%=@weather%></p>
@@ -48,6 +48,7 @@
         </div>
      </div>
   </li>
+
  <ul id="bar">
   <li id="drizzle">
      <div class="top">
@@ -88,8 +89,5 @@
            </div>
         </div>
      </li>
-
-
-
-</ul>
+   </ul>
 </div>

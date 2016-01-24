@@ -1,6 +1,6 @@
 class RemoveUserFromAilments < ActiveRecord::Migration
   def change
-    remove_column :ailments, :user_id, :integer
-    remove_index :ailments, :user_id
+    remove_column :ailments, :integer
+    remove_index :ailments
   end
 end

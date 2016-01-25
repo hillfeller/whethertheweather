@@ -1,6 +1,6 @@
 class AilmentsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @ailment = Ailment.new
     @ailments = current_user.ailments
@@ -25,7 +25,7 @@ class AilmentsController < ApplicationController
       redirect_to ailments_path
     else
       flash[:notice]="Ailment could not be saved."
-      render :new
+      redirect_to :back
     end
   end
 

@@ -12,24 +12,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, placeholder: "Add a new weather update!" %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body, placeholder: "Add some details about your update!" %>
-  </div>
+  <%= form_group_tag(@post.errors[:title]) do %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control', placeholder: "Add a title for your weather update!" %>
+  <% end %>
+
+  <%= form_group_tag(@post.errors[:body]) do %>
+    <%= f.label :body %>
+    <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Add a description to your update!" %>
+  <% end %>
 
   <div class="form-group">
-  <%#= render partial: 'labels/form', locals: { f: f, label: @post.label } %>
-
     <%= label_tag :label %>
     <%= select_tag "label", "<option>Shine</option><option>Cloudy</option><option>Drizzle</option><option>Rain</option><option>Imminent Downpour</option>".html_safe, multiple: false%>
-
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
 </div>

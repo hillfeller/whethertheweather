@@ -3,10 +3,12 @@ class Post < ActiveRecord::Base
   has_many :comments
   has_many :likes, as: :likeable
   belongs_to :label
-
+  validates :user, presence: true
+  default_scope {order('created_at DESC')}
   validates :title, length: {minimum: 5}, presence: true
   validates :body, length: {maximum: 500}, presence: true
-#  validates :label, presence: true
+  #validates :label, presence: true
+
 
   def shine?
     label.name == "shine" if label

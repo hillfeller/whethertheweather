@@ -1,4 +1,4 @@
-<div>
+
 <% if like = current_user.liked?(post) %>
   <%= link_to [post, like], class: 'btn btn-danger', method: :delete do %>
     <i class="glyphicon glyphicon-star"> </i>&nbsp; Unlike
@@ -8,4 +8,3 @@
     <i class="glyphicon glyphicon-star"></i>&nbsp; Like
   <% end %>
 <% end %>
-</div>

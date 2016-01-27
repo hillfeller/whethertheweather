@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-
+  # before_action :logged_in_user, only: [:index, :edit, :update, :destroy,
+  #                                        :following, :followers]
   def show
     @user = User.find(params[:id]) if params[:id].present? && params[:id] != "show"
     unless @user
@@ -23,14 +24,26 @@ class UsersController < ApplicationController
     end
   end
 
+  # def following
+  #   @followings = Relationship.following.all
+  # end
+  #
+  # def followers
+  #   @followers = Relationship.followers.all
+  # end
+
   def following
-    @followings = Relationship.following.all
+    @title = "Following"
+    @user  = User.find(params[:id])
+    @users = @user.following
+    render 'show_follow'
   end
 
   def followers
-    @followers = Relationship.follower.all
+    @title = "Followers"
+    @user  = User.find(params[:id])
+    @users = @user.followers
+    render 'show_follow'
   end
-
-
 
 end

@@ -1,5 +1,9 @@
 <div class="datagrid">
   <h1>Whether the Weather for <%= @user.user_name %>!</h1>
+  <p>  <%="#{@user.user_name}'s ailments include #{@user.ailments.map(&:description).to_sentence}"%> </p>
+    <section class="stats">
+      <%= render 'shared/stats' %>
+    </section>
     <p><% if current_user.following?(@user) %>
       <%= link_to "Unfollow", current_user.relationship_for(@user), method: :delete, class: "btn btn-danger" %>
     <% else %>
@@ -15,10 +19,7 @@
 
 <p>Humidity: <%= @atmosphere["humidity"]%>, Pressure: <%= @atmosphere["pressure"]%></p>
 
-<p>  <%="#{@user.user_name}'s ailments include #{@user.ailments.map(&:description).to_sentence}"%> </p>
-  <section class="stats">
-    <%= render 'shared/stats' %>
-  </section>
+
 
 <h1>User Statistics</h1>
 <br>

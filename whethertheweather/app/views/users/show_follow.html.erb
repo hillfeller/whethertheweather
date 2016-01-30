@@ -19,9 +19,9 @@
   </aside>
   <div class="col-md-8">
     <h3><%= @title %></h3>
-    <% if @users.any? %>
+    <% if @users.followers.any? %>
       <ul class="users follow">
-        <%= render @users.followers %>
+        <%= render @users %>
       </ul>
       <%= will_paginate %>
     <% end %>

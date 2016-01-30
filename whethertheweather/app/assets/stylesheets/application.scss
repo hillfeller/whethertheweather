@@ -26,14 +26,12 @@
         ),url("http://img03.deviantart.net/df26/i/2013/321/5/2/puffy_white_cloud_by_muffet1-d6unjqx.jpg");
     background-attachment: fixed;
     font-color: white;
-    font-family: helvetica;
     z-index: -1;
 
   }
   p{
     font-size: 16px;
     color: lightgrey;
-    font-family: helvetica;
     padding: 10px;
 
     margin-right: 20px;
@@ -79,7 +77,6 @@
     // left: 200px;
     // top: 50px;
     // width: 1150px;
-    font-family: helvetica;
     padding: 10px, 10px, 10px, 10px;
   }
 
@@ -94,8 +91,6 @@
   }
 
   .welcome{
-    font-size: 20px;
-    font-family: adamina;
     top: 50px;
   }
 
@@ -110,10 +105,8 @@
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     );
-    border: 1px;
-    padding: 10px, 10px, 10px, 10px;
+    padding: 10px, 20px, 10px, 10px;
     font-color: white;
-    font-family: adamina;
     margin-right: 10px;
   }
 
@@ -165,9 +158,7 @@
   }
 
   h1{
-    font-family: Helvetica;
     color: lightgrey;
-    font-size: 24px;
     padding-top: 10px;
     margin-left: 20px;
 
@@ -178,7 +169,6 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    font: 30px Helvetica, Arial, Sans-serif; color: #eeeeee;
     height: 50px;
     z-index: -1;
 }
@@ -188,7 +178,6 @@ ul.navbar {
   margin: 0 0 10px;
   padding: 0;
   height: 50px;
-  font: Helvetica, 30px, lightgrey;
   z-index: 3;
 
 }
@@ -197,7 +186,6 @@ li {
     border-right: 1px solid #bbb;
     font-size: 28px;
     color: lightgrey;
-    font: Helvetica, 30px, white;;
     z-index: -1;
   }
 
@@ -214,7 +202,7 @@ li {
 
 /* CONTENT */
 #content { }
-#content h2 { font: bold 30px Helvetica, Arial, Sans-serif; color:#eee; text-shadow: 0px 2px 6px #333; margin-left:400px; padding-top:20px; }
+#content h2 { }
 
 /* BAR CHART */
 #bar { list-style:none;  }
@@ -339,17 +327,15 @@ img {
     top: 10px;
     width: 200px;
     height: 150px;
-    font-family: Helvetica, white, 18px;
   }
 
   h4{
-    font-family: Helvetica;
-    font-size: 18px;
     color: lightgrey;
+    padding-top: 10px;
+    margin-left: 20px;
   }
 
   div.field{
-    font-family: Helvetica;
     font-size: 14px;
     color: lightgrey;
   }
@@ -359,7 +345,6 @@ img {
     background-color: #4CAF50;
     color: white;
     padding: 16px;
-    font-size: 16px;
     border: none;
     cursor: pointer;
 }
@@ -402,7 +387,6 @@ img {
 
 .standardfont{
   font-size: 18px;
-  font-family: 'Times', serif;
 
 }
 
@@ -426,26 +410,25 @@ img {
 }
 
 table {
-  font-family: helvetica, lightgrey;
+  margin-left: 20px;
+  margin-right: 20px;
+
 }
 
  th {
    color: lightgrey;
-   font-family: Helvetica, 20px;
    margin-right: 20px;
 
  }
 
  td{
    color: lightgrey;
-   font-family: Helvetica, 20px;
    margin-left: 20px;
 
  }
 
  div.form-group {
    color: lightgrey;
-   font-family: 12px;
  }
 
 script {
@@ -453,7 +436,8 @@ script {
 }
 
 h3{
-  font: Helvetica, 16px, lightgrey;
+  padding-top: 10px;
+  margin-left: 20px;
 }
 
 thead {

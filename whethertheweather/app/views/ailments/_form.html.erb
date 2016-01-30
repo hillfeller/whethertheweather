@@ -1,4 +1,5 @@
 <div class = "datagrid">
+<h1>Ailments for <%= current_user.user_name %></h1>
 <h4>Add an ache, ailment, or condition</h4>
 <%= form_for(@ailment) do |f| %>
   <% if @ailment.errors.any? %>

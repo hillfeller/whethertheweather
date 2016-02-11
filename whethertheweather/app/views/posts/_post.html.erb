@@ -1,0 +1,17 @@
+<div class="media">
+  <div class="media-body">
+    <h4 class="media-heading">
+      <%= link_to post.title, post_path(post) %>
+    </h4>
+    <small>
+      submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.email %> <br>
+      <%= post.body %>
+      <%= post.user.location %>
+      <%#= post.user.ailments.map(&:type).to_sentence %>
+      <%= post.label %>
+      <%= link_to 'Show', post%>
+      <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </small>
+  </div>
+</div>

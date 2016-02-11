@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require_tales
  */
 
   @import "bootstrap-sprockets";
@@ -72,13 +73,6 @@
 
 
 
-  div.container {
-    // position: absolute;
-    // left: 200px;
-    // top: 50px;
-    // width: 1150px;
-    padding: 10px, 10px, 10px, 10px;
-  }
 
   .feed-icon {
     width: 28px;
@@ -86,8 +80,8 @@
   }
 
   .full-width {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
   }
 
   .welcome{

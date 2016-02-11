@@ -1,44 +1,17 @@
-
 class CommentsController < ApplicationController
-  before_action :set_post
-
-  def new
-    @post = Post.find(params[:post_id])
-    @comment = Comment.new
-  end
-
-  def edit
-    @comment = Comment.find(params[:id])
-  end
-
-  def update
-    @comment = Comment.find(params[:id])
-
-    if comment.save
-      @comment.labels = Label.update_labels(params[:comment][:labels])
-      flash[:notice] = "Comment updated successfully."
-      redirect_to [@post]
-    else
-      flash[:error] = "Comment failed to save update."
-      redirect_to [@post]
-    end
-  end
+  before_action :require_sign_in
+  before_action :authorize_user, only: [:destroy]
 
   def create
     @post = Post.find(params[:post_id])
-    @comment = Comment.new(comment_params)
-    @comment.post = @post
+    @comment = @post.comments.new(comment_params)
     @comment.user = current_user
+    @new_comment = Comment.new
 
     if @comment.save
       flash[:notice] = "Comment saved successfully."
     else
       flash[:error] = "Comment failed to save."
-    end
-
-    respond_to do |format|
-      format.html { redirect_to @post }
-      format.js
     end
   end
 
@@ -48,18 +21,10 @@ class CommentsController < ApplicationController
 
     if @comment.destroy
       flash[:notice] = "Comment was deleted."
-      redirect_to [@post]
     else
       flash[:error] = "Comment couldn't be deleted. Try again."
-      redirect_to [@post]
     end
-
-    # respond_to do |format|
-    #   format.html
-    #   format.js
-    # end
   end
-
 
   private
 

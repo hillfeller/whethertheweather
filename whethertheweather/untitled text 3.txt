@@ -1,0 +1,6 @@
+
+def substituter
+	string = "/fXtG4fhrf&Eh95GPwu3H<s[wr-3v0USC^b3qXaZJFD:%y~C^vW6lQ>O-?0RJcrJ2OUUI|jV*HJ1Z4+OE;WbGZ7,I-si>*wOVM)tr!l`~bD?Wrq;Q+Z8jn,%njL|d*+Alh32zOgH[vT]PYxd$O`Las&X}pe4Xq6&j8e=`+hQbmqA=}O1z$9cx/Q+k0DTJ[:8Ez~jDe6EIBKFQ|-gx<(XD<:*H<FQ4Q8d9RxkAUy&{,lGY`8yO5G2iEO=1^j/{!`7TRL=T`}ft<<J)qT<eqdyq79?veyDQ5Cnwo^%-I=d=t<|?aUclJ|HPp/xZAk_7_&_&*DJgMWgjecmrOaaFGkPwpVnl}Mg]ikAL(`dP.+y6PSfhy7f%{QCH`*R$u4b!r}_;.^KWg|5{g-U8HlJPp&;CIol7k~iPknJ:n^aS02Q-7QRD?R(L_`WYs6Ifj2xx74SM3Y<MUEmb(_/oG3_P)^FRT(c,4MXE%yHL/buNkV|Q!wYWJ<eeJXl=Mhiy0eU}98t_p)IiS}H;IKW0`kE&xVyC8sw+FQyHPbq)48pi].pt.28m`s$Fgij}L^,bGmOC>%Wn*!=i|P?==`)PV)lT=YZGi7(SO:V==o}=83piopV&M:xJ-}$~jr;OkT.,q?|v%jPw3?PA?kVpFRX{uY4N9!(5iTEVjZ[:/Iq1N4.7F>3NMRSe<:^!Qp:_sdx1TRe>c!S3DL)9+=Dov0_;zL{j66b8.|{{+fPRp[gK-VkR1C;73*Wv<c]jig$!e2]OE?y[~)iQZDV?W<gfAvKHOG8Hr(Dzux8IdwVU9NI6DtpJM*[fyYkmUV+mnI$$+u.^D?=nhtz<.acS>s.I0<):s_`pU]jetG-y<B&edB4qs7S|j_+nG*Xorp,*CGAx0lHOi8k+izxjv,OZomrlD0hMQu5V+jGrY]1~8xTv=cdp]4|7dy9f6aJPJh&h]asg-A0X[S`a?+6Z_+mi:XYI/?N~.h3B^M7{H<wC}Ay^;wvnvih$:T>"
+	string = string.to_a
+end
+	

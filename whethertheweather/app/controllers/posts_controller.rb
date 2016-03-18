@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :require_sign_in, except: :show
 
   def index
-    @posts = Post.all
+    @posts = Post.order(:created_at)
   end
 
   def show

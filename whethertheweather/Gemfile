@@ -73,3 +73,9 @@ end
 gem 'mocha', group: :test
 
 gem 'yahoo_weather'
+
+gem 'mobylette'
+
+gem 'jquery_mobile_rails'
+
+gem 'rack-mini-profiler'

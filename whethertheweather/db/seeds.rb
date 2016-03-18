@@ -51,3 +51,4 @@ puts "Seed finished"
 puts "#{User.count} users created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

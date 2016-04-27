@@ -8,13 +8,11 @@
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>
-      <!-- <% if @users.any? %>
-        <div class="user_avatars">
-          <% @users.each do |user| %>
-            <#%= link_to gravatar_for(user, size: 30), user %>
-          <% end %>
-        </div>
-      <% end %> -->
+      <% if current_user.following?(@user) %>
+        <%= link_to "Unfollow", current_user.relationship_for(@user), method: :delete, class: "btn btn-danger" %>
+      <% else %>
+        <%= link_to "Follow", relationships_path(user_id: @user.id), method: :post, class: "btn btn-success" %>
+      <% end %>
     </section>
   </aside>
   <div class="col-md-8">

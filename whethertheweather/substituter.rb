@@ -25,8 +25,6 @@ require 'digest'
 			i = i
 		end
 
- 	
-
 } 			
 puts "Minus three stuff:"
   			puts makemeanarray.join("")

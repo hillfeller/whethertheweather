@@ -1,13 +1,14 @@
-<% set_weather_for(@location.address) %>
+<div class="datagrid">
+  <% set_weather_for(@location.address) %>
 
-<p id="notice"><%= notice %></p>
-<p class="standardfont">Location:<%=@place%></p>
-<p class="standardfont">Weather Forecast:<%=@weather%></p>
-<p class="standardfont">Humidity: <%= @atmosphere["humidity"]%></p>
-<p class="standardfont">Pressure: <%= @atmosphere["pressure"]%></p>
-<p class="standardfont">Rising: <%=@atmosphere["rising"]%></p>
-<p class="standardfont">Visibility: <%=@atmosphere["visibility"]%></p>
+  <p id="notice"><%= notice %></p>
+  <p class="standardfont">Location:<%=@place%></p>
+  <p class="standardfont">Weather Forecast:<%=@weather%></p>
+  <p class="standardfont">Humidity: <%= @atmosphere["humidity"]%></p>
+  <p class="standardfont">Pressure: <%= @atmosphere["pressure"]%></p>
+  <p class="standardfont">Rising: <%=@atmosphere["rising"]%></p>
+  <p class="standardfont">Visibility: <%=@atmosphere["visibility"]%></p>
 
 
-<%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+  <%= link_to 'Back', locations_path %>
+</div>

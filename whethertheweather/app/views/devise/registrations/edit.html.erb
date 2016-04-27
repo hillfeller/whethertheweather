@@ -43,12 +43,12 @@
   </div>
 <% end %>
 
-<h3>Ailments</h3>
+<h2>Ailments</h2>
 <%= link_to "Manage Ailments", ailments_path, class: "btn btn-info" %>
 
-<h3>Cancel my account</h3>
+<h2>Cancel my account</h2>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
 
 <%= link_to "Back", :back %>
 </div>

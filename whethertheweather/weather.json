@@ -51,7 +51,7 @@
           "temp": "60",
           "text": "Cloudy"
        },
-       "description": "\n<img src=\"http://l.yimg.com/a/i/us/we/52/26.gif\"/><br />\n<b>Current Conditions:<\/b><br />\nCloudy, 60 F<BR />\n<BR /><b>Forecast:<\/b><BR />\nTue - Mostly Cloudy. High: 60 Low: 54<br />\nWed - Rain. High: 63 Low: 61<br />\nThu - Thundershowers. High: 73 Low: 61<br />\nFri - PM Rain. High: 65 Low: 52<br />\nSat - Light Rain. High: 54 Low: 52<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/New_York__NY/*http://weather.yahoo.com/forecast/USNY0996_f.html\">Full Forecast at Yahoo! Weather<\/a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel<\/a>)<br/>\n",
+       "description": "\n<img src=\"http://l.yimg.com/a/i/us/we/52/26.gif\"/><br />\n<b>Current Conditions:<\/b><br />\nCloudy, 60 F<BR />\n<BR /><b>Forecast:<\/b><BR />\nTue - Mostly Cloudy. High: 60 Low: 54<br />\nWed - Rain. High: 63 Low: 61<br />\nThu - Thundershowers. High: 73 Low: 61<br />\nFri - PM Rain. High: 65 Low: 52<br />\nSat - Light Rain. High: 54 Low: 52<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/New_York__NY/*http://weather.yahoo.com/forecast/USNY0996_f.html\",
        "forecast": [
           {
              "code": "27",

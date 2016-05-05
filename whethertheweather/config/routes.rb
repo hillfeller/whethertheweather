@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :activities
   resources :tests
   resources :labels, only: [:show, :create, :destroy]
 
